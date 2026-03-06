@@ -15,6 +15,7 @@ Diese Seite ist die offizielle **Support-Seite** fuer unsere Business Central Ap
 | E-Mail Support           | Allgemeine Support-Anfragen, Dateien/Details senden           | `info@hochstetter.biz`                                          |
 | Telefon Support (DACH)   | Direkter Kontakt bei dringenden Rueckfragen                   | `+49 151 182 67 67 9`                                           |
 | Community / Forum        | Fragen, Austausch, Best Practices                             | https://github.com/Hochstetter-biz/Creation-Support/discussions |
+| Hilfe / Wiki             | Hilfe und Anleitungen                                         | https://github.com/Hochstetter-biz/Creation-Support/wiki        |
 
 ## Wann nutze ich welchen Kanal?
 
