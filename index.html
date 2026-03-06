@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support – Business Central Apps Creation Tools</title>
+  <meta name="description" content="Get help with Business Central Apps Creation Tools. Reach our support team by email, contact form, live chat, or community forums." />
+  <style>
+    /* ── Reset & base ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --brand:   #0078d4;
+      --brand-d: #005fa3;
+      --bg:      #f4f6f9;
+      --surface: #ffffff;
+      --border:  #d9dee6;
+      --text:    #1a1a2e;
+      --muted:   #5a6278;
+      --radius:  10px;
+      --shadow:  0 2px 12px rgba(0,0,0,.08);
+    }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ── Header / hero ────────────────────────────────────────── */
+    header {
+      background: linear-gradient(135deg, #003a6e 0%, #0078d4 100%);
+      color: #fff;
+      text-align: center;
+      padding: 3.5rem 1rem 2.5rem;
+    }
+    header .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      margin-bottom: 1.2rem;
+    }
+    header .logo svg { width: 40px; height: 40px; fill: #fff; }
+    header h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 700; }
+    header p  { margin-top: .6rem; font-size: 1.05rem; opacity: .88; }
+
+    /* ── Nav pills ────────────────────────────────────────────── */
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .6rem;
+      background: var(--brand-d);
+      padding: .75rem 1rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: .9rem;
+      font-weight: 600;
+      padding: .35rem .9rem;
+      border-radius: 20px;
+      border: 1.5px solid rgba(255,255,255,.4);
+      transition: background .2s, border-color .2s;
+    }
+    nav a:hover { background: rgba(255,255,255,.18); border-color: #fff; }
+
+    /* ── Layout ───────────────────────────────────────────────── */
+    main {
+      max-width: 1100px;
+      margin: 2.5rem auto;
+      padding: 0 1.25rem 3rem;
+      display: grid;
+      gap: 2.5rem;
+    }
+
+    /* ── Section header ───────────────────────────────────────── */
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--brand-d);
+      margin-bottom: 1rem;
+    }
+    .section-title svg { width: 28px; height: 28px; fill: var(--brand); flex-shrink: 0; }
+
+    /* ── Card grid ────────────────────────────────────────────── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.5rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+    .card h3 { font-size: 1rem; font-weight: 700; }
+    .card p  { font-size: .9rem; color: var(--muted); flex: 1; }
+    .card a.btn {
+      display: inline-block;
+      margin-top: .5rem;
+      padding: .45rem .9rem;
+      background: var(--brand);
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: .88rem;
+      font-weight: 600;
+      align-self: flex-start;
+      transition: background .2s;
+    }
+    .card a.btn:hover { background: var(--brand-d); }
+
+    /* ── Panel (full-width box) ────────────────────────────────── */
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 2rem 2rem 2.25rem;
+    }
+
+    /* ── Contact form ─────────────────────────────────────────── */
+    form { display: grid; gap: 1rem; }
+    form .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 540px) { form .row-2 { grid-template-columns: 1fr; } }
+    label {
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--muted);
+      display: block;
+      margin-bottom: .3rem;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: .55rem .8rem;
+      border: 1.5px solid var(--border);
+      border-radius: 6px;
+      font-size: .95rem;
+      font-family: inherit;
+      color: var(--text);
+      background: #fafbfc;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--brand);
+      box-shadow: 0 0 0 3px rgba(0,120,212,.15);
+    }
+    textarea { resize: vertical; min-height: 120px; }
+    button[type="submit"] {
+      justify-self: flex-start;
+      padding: .6rem 1.6rem;
+      background: var(--brand);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: .95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    button[type="submit"]:hover { background: var(--brand-d); }
+    #form-success {
+      display: none;
+      padding: .85rem 1rem;
+      background: #e6f4ea;
+      border: 1px solid #a8d5b0;
+      border-radius: 6px;
+      color: #1d6b34;
+      font-weight: 600;
+    }
+
+    /* ── Chat widget ──────────────────────────────────────────── */
+    .chat-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+      margin-top: .5rem;
+    }
+    .chat-option {
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.1rem;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color .2s, box-shadow .2s;
+      background: #fafbfc;
+    }
+    .chat-option:hover {
+      border-color: var(--brand);
+      box-shadow: 0 0 0 3px rgba(0,120,212,.1);
+    }
+    .chat-option svg { width: 36px; height: 36px; fill: var(--brand); margin-bottom: .6rem; }
+    .chat-option h4 { font-size: .95rem; font-weight: 700; }
+    .chat-option p  { font-size: .82rem; color: var(--muted); margin-top: .3rem; }
+    .badge {
+      display: inline-block;
+      font-size: .72rem;
+      font-weight: 700;
+      padding: .15rem .55rem;
+      border-radius: 12px;
+      margin-top: .45rem;
+    }
+    .badge.online  { background: #e6f4ea; color: #1d6b34; }
+    .badge.offline { background: #fef3cd; color: #7a5200; }
+
+    /* ── Community / forums ───────────────────────────────────── */
+    .forum-list { list-style: none; display: grid; gap: .75rem; margin-top: .5rem; }
+    .forum-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: .9rem;
+      padding: .9rem 1rem;
+      background: #fafbfc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: border-color .2s;
+    }
+    .forum-list li:hover { border-color: var(--brand); }
+    .forum-list li svg { width: 24px; height: 24px; fill: var(--brand); flex-shrink: 0; margin-top: .1rem; }
+    .forum-list li .info h4 { font-size: .95rem; font-weight: 700; }
+    .forum-list li .info p  { font-size: .85rem; color: var(--muted); }
+    .forum-list li .info a  { color: var(--brand); font-size: .85rem; text-decoration: none; font-weight: 600; }
+    .forum-list li .info a:hover { text-decoration: underline; }
+
+    /* ── Footer ───────────────────────────────────────────────── */
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      color: var(--muted);
+      font-size: .85rem;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Header ──────────────────────────────────────────────────── -->
+<header>
+  <div class="logo">
+    <!-- Microsoft-style app icon placeholder -->
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="2"  y="2"  width="13" height="13" rx="2"/>
+      <rect x="17" y="2"  width="13" height="13" rx="2"/>
+      <rect x="2"  y="17" width="13" height="13" rx="2"/>
+      <rect x="17" y="17" width="13" height="13" rx="2"/>
+    </svg>
+    <span style="font-size:1.15rem;font-weight:800;letter-spacing:-.5px;">Business Central Apps</span>
+  </div>
+  <h1>Creation Tools — Support Center</h1>
+  <p>We're here to help. Choose the support channel that works best for you.</p>
+</header>
+
+<!-- ── Navigation ──────────────────────────────────────────────── -->
+<nav aria-label="Support sections">
+  <a href="#email">Email Support</a>
+  <a href="#contact">Contact Form</a>
+  <a href="#chat">Live Chat</a>
+  <a href="#community">Community &amp; Forums</a>
+</nav>
+
+<!-- ── Main content ────────────────────────────────────────────── -->
+<main>
+
+  <!-- ── 1. Email Support ──────────────────────────────────────── -->
+  <section id="email" aria-labelledby="email-title">
+    <h2 class="section-title" id="email-title">
+      <!-- Envelope icon -->
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0
+                 2-2V6a2 2 0 0 0-2-2Zm0 2-8 5-8-5h16Zm0 12H4V8.5l7.45
+                 4.65a1 1 0 0 0 1.1 0L20 8.5V18Z"/>
+      </svg>
+      Email Support
+    </h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>General Support</h3>
+        <p>Questions about features, licensing, or getting started with Creation Tools.</p>
+        <a class="btn" href="mailto:support@hochstetter-biz.example.com">support@hochstetter-biz</a>
+      </div>
+      <div class="card">
+        <h3>Technical / Bug Reports</h3>
+        <p>Report errors, unexpected behavior, or integration issues in Business Central.</p>
+        <a class="btn" href="mailto:techsupport@hochstetter-biz.example.com">techsupport@hochstetter-biz</a>
+      </div>
+      <div class="card">
+        <h3>Billing &amp; Licensing</h3>
+        <p>Subscription renewals, invoice requests, or licensing questions.</p>
+        <a class="btn" href="mailto:billing@hochstetter-biz.example.com">billing@hochstetter-biz</a>
+      </div>
+    </div>
+    <p style="margin-top:1rem;font-size:.88rem;color:var(--muted);">
+      📅 Email response time: <strong>within 1 business day</strong> (Mon–Fri, 08:00–17:00 CET)
+    </p>
+  </section>
+
+  <!-- ── 2. Contact Form ───────────────────────────────────────── -->
+  <section id="contact" aria-labelledby="contact-title">
+    <h2 class="section-title" id="contact-title">
+      <!-- Form / clipboard icon -->
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M19 3h-4.18A3 3 0 0 0 9.18 3H5a2 2 0 0 0-2 2v16a2 2 0 0 0
+                 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Zm-7 0a1 1 0 0 1 1
+                 1H11a1 1 0 0 1 1-1Zm7 18H5V5h2v1a2 2 0 0 0 2 2h6a2 2 0 0 0
+                 2-2V5h2v16Zm-9-9h4a1 1 0 0 0 0-2h-4a1 1 0 0 0 0 2Zm0 4h6a1
+                 1 0 0 0 0-2h-6a1 1 0 0 0 0 2Z"/>
+      </svg>
+      Contact Form
+    </h2>
+    <div class="panel">
+      <div id="form-success" role="alert">
+        ✅ Your message has been sent! We'll get back to you within 1 business day.
+      </div>
+      <form id="support-form" novalidate>
+        <div class="row-2">
+          <div>
+            <label for="f-name">Full name *</label>
+            <input id="f-name" name="name" type="text" placeholder="Jane Smith" required />
+          </div>
+          <div>
+            <label for="f-email">Email address *</label>
+            <input id="f-email" name="email" type="email" placeholder="jane@example.com" required />
+          </div>
+        </div>
+        <div class="row-2">
+          <div>
+            <label for="f-company">Company</label>
+            <input id="f-company" name="company" type="text" placeholder="Contoso Ltd." />
+          </div>
+          <div>
+            <label for="f-phone">Phone (optional)</label>
+            <input id="f-phone" name="phone" type="tel" placeholder="+49 89 12345678" />
+          </div>
+        </div>
+        <div>
+          <label for="f-topic">Topic *</label>
+          <select id="f-topic" name="topic" required>
+            <option value="" disabled selected>Select a topic…</option>
+            <option value="general">General question</option>
+            <option value="bug">Bug / error report</option>
+            <option value="feature">Feature request</option>
+            <option value="billing">Billing &amp; licensing</option>
+            <option value="integration">Integration / API</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="f-subject">Subject *</label>
+          <input id="f-subject" name="subject" type="text" placeholder="Brief summary of your question" required />
+        </div>
+        <div>
+          <label for="f-message">Message *</label>
+          <textarea id="f-message" name="message" placeholder="Please describe your issue or question in as much detail as possible…" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── 3. Chat Agents ────────────────────────────────────────── -->
+  <section id="chat" aria-labelledby="chat-title">
+    <h2 class="section-title" id="chat-title">
+      <!-- Chat bubble icon -->
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0
+                 0-2-2Zm0 14H5.17L4 17.17V4h16v12Z"/>
+      </svg>
+      Live Chat &amp; Chat Agents
+    </h2>
+    <div class="panel">
+      <p style="color:var(--muted);font-size:.92rem;margin-bottom:1rem;">
+        Instant help from our support agents or AI-powered assistant — pick the channel that suits you.
+      </p>
+      <div class="chat-options">
+
+        <div class="chat-option" role="button" tabindex="0"
+             aria-label="Start live chat with a support agent"
+             onclick="alert('Live chat is opening… (integrate your chat provider here)')">
+          <!-- Person icon -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-4.41 0-8
+                     2.01-8 4.5V20h16v-1.5c0-2.49-3.59-4.5-8-4.5Z"/>
+          </svg>
+          <h4>Live Agent Chat</h4>
+          <p>Talk to a human support agent in real time.</p>
+          <span class="badge online">● Online now</span>
+        </div>
+
+        <div class="chat-option" role="button" tabindex="0"
+             aria-label="Start AI assistant chat"
+             onclick="alert('AI assistant is opening… (integrate your bot provider here)')">
+          <!-- Bot / AI icon -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h3a3 3 0
+                     0 1 3 3v7a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-7a3 3 0 0 1
+                     3-3h3V5.73A2 2 0 0 1 10 4a2 2 0 0 1 2-2Zm-4 9a1 1 0 1
+                     0 0 2 1 1 0 0 0 0-2Zm8 0a1 1 0 1 0 0 2 1 1 0 0 0
+                     0-2Zm-4 4c-1.5 0-2.77-.78-3.5-1.94l1.55-.89C10.46 13.69
+                     11.19 14 12 14s1.54-.31 2-.83l1.55.89C14.77 15.22 13.5
+                     16 12 16Z"/>
+          </svg>
+          <h4>AI Assistant (Bot)</h4>
+          <p>24/7 automated help for common questions and quick answers.</p>
+          <span class="badge online">● Available 24/7</span>
+        </div>
+
+        <div class="chat-option" role="button" tabindex="0"
+             aria-label="Start Microsoft Teams chat"
+             onclick="alert('Teams chat is opening… (integrate Teams deep-link here)')">
+          <!-- Teams-style icon -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M17.5 9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm1.5
+                     1h-3a1 1 0 0 0-1 1v4.5A4.5 4.5 0 0 1 10.5 20H10v1a1
+                     1 0 0 0 1 1h6a2 2 0 0 0 2-2v-9a1 1 0 0 0-1-1ZM9 11H6a2
+                     2 0 0 0-2 2v5a4 4 0 0 0 4 4h3a1 1 0 0 0 1-1v-8a2 2 0
+                     0 0-2-2Zm-1.5-2a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+          </svg>
+          <h4>Microsoft Teams</h4>
+          <p>Connect via Teams for screen sharing and collaborative troubleshooting.</p>
+          <span class="badge offline">○ Business hours</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 4. Community & Forums ─────────────────────────────────── -->
+  <section id="community" aria-labelledby="community-title">
+    <h2 class="section-title" id="community-title">
+      <!-- Globe / community icon -->
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3
+                 1.34-3 3s1.34 3 3 3Zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5
+                 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3Zm0 2c-2.33 0-7 1.17-7
+                 3.5V19h14v-2.5C15 14.17 10.33 13 8 13Zm8 0c-.29 0-.62.02-.97.05
+                 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5Z"/>
+      </svg>
+      Community &amp; Forums
+    </h2>
+    <div class="panel">
+      <ul class="forum-list">
+        <li>
+          <!-- GitHub Discussions icon -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58
+                     0-.28-.01-1.03-.02-2.03-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73
+                     1.21.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93
+                     0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02.004 2.04.14
+                     3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48
+                     5.92.43.37.81 1.1.81 2.22 0 1.6-.01 2.9-.01 3.29 0 .32.21.69.82.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12Z"/>
+          </svg>
+          <div class="info">
+            <h4>GitHub Discussions</h4>
+            <p>Ask questions, share tips, and get answers from the community and our team directly on GitHub.</p>
+            <a href="https://github.com/Hochstetter-biz/.github/discussions" target="_blank" rel="noopener noreferrer">
+              Open GitHub Discussions →
+            </a>
+          </div>
+        </li>
+        <li>
+          <!-- Forum / speech icon -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M20 2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h4l4 4 4-4h4a2 2 0 0 0
+                     2-2V4a2 2 0 0 0-2-2Zm0 14H4V4h16v12Z"/>
+          </svg>
+          <div class="info">
+            <h4>Microsoft Dynamics 365 Community</h4>
+            <p>Connect with the wider Business Central ecosystem, find experts, and browse knowledge-base articles.</p>
+            <a href="https://community.dynamics.com/forums/thread/?partialUrl=businesscentral" target="_blank" rel="noopener noreferrer">
+              Visit Dynamics 365 Community →
+            </a>
+          </div>
+        </li>
+        <li>
+          <!-- Stack Overflow icon -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M17.36 20.2v-5.38h1.79V22H3v-7.18h1.8v5.38h12.56ZM6.77 14.32l.37-1.76
+                     8.76 1.85-.37 1.76-8.76-1.85Zm1.16-4.21.76-1.61 8.14 3.78-.76 1.62-8.14-3.79Zm2.26-3.99
+                     1.15-1.38 6.9 5.76-1.15 1.37-6.9-5.75ZM15.17 3l1.51 1.2-5.29 6.6-1.51-1.2L15.17 3ZM5.77
+                     17.26h8.78v1.79H5.77v-1.79Z"/>
+          </svg>
+          <div class="info">
+            <h4>Stack Overflow — Business Central tag</h4>
+            <p>Search thousands of answered questions or post your own technical question for the developer community.</p>
+            <a href="https://stackoverflow.com/questions/tagged/dynamics-365-business-central" target="_blank" rel="noopener noreferrer">
+              Browse Stack Overflow →
+            </a>
+          </div>
+        </li>
+        <li>
+          <!-- YouTube / knowledge base icon -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52
+                     2 12 2Zm1 15h-2v-6h2v6Zm0-8h-2V7h2v2Z"/>
+          </svg>
+          <div class="info">
+            <h4>Knowledge Base &amp; Documentation</h4>
+            <p>Step-by-step guides, release notes, API documentation, and video tutorials for Creation Tools.</p>
+            <a href="https://docs.hochstetter-biz.example.com/creation-tools" target="_blank" rel="noopener noreferrer">
+              Open Documentation →
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── Footer ───────────────────────────────────────────────────── -->
+<footer>
+  <p>&copy; 2026 Hochstetter Business Solutions · Business Central Apps Creation Tools</p>
+  <p style="margin-top:.3rem;">
+    <a href="mailto:support@hochstetter-biz.example.com" style="color:var(--brand);text-decoration:none;">support@hochstetter-biz</a>
+    &nbsp;|&nbsp;
+    <a href="https://github.com/Hochstetter-biz" target="_blank" rel="noopener noreferrer" style="color:var(--brand);text-decoration:none;">GitHub</a>
+  </p>
+</footer>
+
+<!-- ── Inline JS: form feedback ─────────────────────────────────── -->
+<script>
+  document.getElementById('support-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const form = e.target;
+    const required = form.querySelectorAll('[required]');
+    let valid = true;
+    required.forEach(function (el) {
+      if (!el.value.trim()) {
+        el.style.borderColor = '#c0392b';
+        valid = false;
+      } else {
+        el.style.borderColor = '';
+      }
+    });
+    if (!valid) return;
+
+    /* In a real deployment replace this block with a fetch() to your
+       form-handling endpoint / serverless function / Power Automate flow. */
+    document.getElementById('form-success').style.display = 'block';
+    form.reset();
+    form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  /* Reset border color on user input */
+  document.getElementById('support-form').addEventListener('input', function (e) {
+    if (e.target.style) e.target.style.borderColor = '';
+  });
+</script>
+
+</body>
+</html>
