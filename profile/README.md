@@ -1,12 +1,23 @@
-## Hi there 👋
+# Creation Tools - Support (Business Central Apps)
 
-<!--
+Diese Seite ist die offizielle **Support-Seite** fuer unsere Business Central Apps.
 
-**Here are some ideas to get you started:**
+## Reaktionszeit
 
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+- Erste Rueckmeldung: in der Regel innerhalb von **1-2 Werktagen**
+- Kritische Stoerungen: schnellstmoegliche Priorisierung nach Eingang
+
+## Kontaktoptionen
+
+| Kanal                    | Zweck                                                         | Link / Kontakt                                                  |
+| ------------------------ | ------------------------------------------------------------- | --------------------------------------------------------------- |
+| Kontaktformular (Issues) | Fehler melden, Supportfall erstellen, Nachverfolgung          | https://github.com/Hochstetter-biz/Creation-Support/issues      |
+| E-Mail Support           | Allgemeine Support-Anfragen, Dateien/Details senden           | `info@hochstetter.biz`                                          |
+| Telefon Support (DACH)   | Direkter Kontakt bei dringenden Rueckfragen                   | `+49 151 182 67 67 9`                                           |
+| Community / Forum        | Fragen, Austausch, Best Practices                             | https://github.com/Hochstetter-biz/Creation-Support/discussions |
+
+## Wann nutze ich welchen Kanal?
+
+- Bei Fehlern oder konkreten Defekten: nutze das Kontaktformular unter `issues`.
+- Bei allgemeinen Fragen oder Abstimmungen: nutze E-Mail oder Community.
+- Bei dringenden Themen: nutze den telefonischen Support.
