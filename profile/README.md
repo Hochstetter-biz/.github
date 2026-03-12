@@ -13,7 +13,6 @@ Diese Seite ist die offizielle **Support-Seite** fuer unsere Business Central Ap
 | ------------------------ | ------------------------------------------------------------- | --------------------------------------------------------------- |
 | Kontaktformular (Issues) | Fehler melden, Supportfall erstellen, Nachverfolgung          | https://github.com/Hochstetter-biz/Creation-Support/issues      |
 | E-Mail Support           | Allgemeine Support-Anfragen, Dateien/Details senden           | `info@hochstetter.biz`                                          |
-| Telefon Support (DACH)   | Direkter Kontakt bei dringenden Rueckfragen                   | `+49 151 182 67 67 9`                                           |
 | Community / Forum        | Fragen, Austausch, Best Practices                             | https://github.com/Hochstetter-biz/Creation-Support/discussions |
 | Hilfe / Wiki             | Hilfe und Anleitungen                                         | https://github.com/Hochstetter-biz/Creation-Support/wiki        |
 
@@ -21,4 +20,3 @@ Diese Seite ist die offizielle **Support-Seite** fuer unsere Business Central Ap
 
 - Bei Fehlern oder konkreten Defekten: nutze das Kontaktformular unter `issues`.
 - Bei allgemeinen Fragen oder Abstimmungen: nutze E-Mail oder Community.
-- Bei dringenden Themen: nutze den telefonischen Support.
